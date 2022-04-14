@@ -28,7 +28,7 @@ namespace WebApi.Controllers
                 {
                     string responce = await client.GetStringAsync(request.Url);
 
-                    var items = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(responce);
+                    var items = JsonSerializer.Deserialize<List<Dictionary<string, object>>>(responce);
 
                     foreach (var item in items)
                     {
